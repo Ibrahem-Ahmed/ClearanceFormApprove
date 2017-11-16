@@ -1,0 +1,60 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ClearanceFormApprove.controller.Details">
+	<App>
+		<Page title="Details">
+			<content>		
+			    <sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="__form0">		
+			        <sap.ui.layout.form:formContainers>		
+			            <sap.ui.layout.form:FormContainer id="__container1">		
+			                <sap.ui.layout.form:formElements>		
+			                    <sap.ui.layout.form:FormElement label="{i18n>Remarks}" id="__element1">		
+			                        <sap.ui.layout.form:fields>		
+			                            <TextArea id="RemarksText" cols="50" placeholder="{i18n>Remarks}" maxLength="255"/>		
+			                        </sap.ui.layout.form:fields>		
+			                    </sap.ui.layout.form:FormElement>		
+			                </sap.ui.layout.form:formElements>		
+			            </sap.ui.layout.form:FormContainer>		
+			        </sap.ui.layout.form:formContainers>		
+			        <sap.ui.layout.form:layout>		
+			            <sap.ui.layout.form:ResponsiveGridLayout id="__layout0"/>		
+			        </sap.ui.layout.form:layout></sap.ui.layout.form:Form>		
+			    <Table id="idProductsTable" inset="false">
+							<headerToolbar>
+								<Toolbar>
+									<Title text="Approvers" level="H2"/>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column demandPopin="true" width="8em">
+									<Text text="Approver"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="Name"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="Remarks"/>
+								</Column>
+								<Column width="8em" hAlign="Center">
+									<Text text="State"/>
+								</Column>
+							</columns>
+					</Table>
+			</content>
+			<footer>
+			    <Bar class="sapContrast sapContrastPlus" id="__bar1">
+			        <contentRight>
+			            <Button text="{i18n>Approve}" 
+		            			id="__approve" 
+		            			icon="sap-icon://accept"
+		            			type="Accept" 
+		            			press="ApproveRequest"/>
+			            <Button text="{i18n>Reject}" 
+		            			id="__reject" 
+		            			icon="sap-icon://decline" 
+		            			type="Reject"
+		            			press="RejectRequest"/>
+			        </contentRight>
+			    </Bar>
+			</footer>
+		</Page>
+	</App>
+</mvc:View>

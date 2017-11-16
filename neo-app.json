@@ -1,0 +1,40 @@
+{
+  "welcomeFile": "/webapp/index.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources",
+        "version": "1.38.30"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources",
+        "version": "1.38.30"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/destination/alnasser",
+      "target": {
+        "type": "destination",
+        "name": "alnasser"
+      },
+      "description": "alnasser OData Service"
+    }
+  ],
+  "cacheControl": [
+    {
+      "path": "/",
+      "directive": "none"
+    }
+  ],
+  "sendWelcomeFileRedirect": true
+}

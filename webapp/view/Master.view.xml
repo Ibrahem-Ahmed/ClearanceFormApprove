@@ -1,0 +1,35 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ClearanceFormApprove.controller.Master">
+	<App>
+		<pages>
+			<Page title="Master">
+				<content>
+				    <List noDataText="{i18n>NoData}" id="__list0" items="{/ApproveClearanceFormHeaderSet}" growing="true" growingScrollToLoad="true">
+				        <items>
+				            <ObjectListItem
+				            	type="Navigation" 
+				            	title="{From}- {To}" 
+				            	id="__item0"
+				            	press="GoToLineItem"
+				            	>
+								<firstStatus>
+									<ObjectStatus
+										text="{State}"
+										state="{
+			            						path: 'State',
+												formatter: 'ClearanceFormApprove.formatter.Formatter.status'
+										}" />
+								</firstStatus>
+								<attributes>
+									<ObjectAttribute text="{ItemDescription}" />
+									<ObjectAttribute text="{EmployeeNo}" />
+									<ObjectAttribute text="{EmployeeName}" />
+									<ObjectAttribute text="{FormTypeDesc}" />
+								</attributes>
+				            </ObjectListItem>
+				            </items>
+				    </List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
